@@ -1,0 +1,12 @@
+/* Küçük görsel iyileştirmeler */
+code {
+    font-size: 0.95em;
+}
+
+.table > :not(caption) > * > * {
+    padding: .65rem .75rem;
+}
+
+footer a {
+    color: #fff;
+}

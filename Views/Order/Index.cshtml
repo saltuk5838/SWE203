@@ -1,0 +1,54 @@
+@model List<MealOrder>
+
+<div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+    <div>
+        <h1 class="h3 mb-1">@ViewData["Title"]</h1>
+        <p class="text-muted mb-0">
+            Toplam yemek siparişi sayısı: <strong>@ViewBag.TotalCount</strong>
+            <span class="mx-1">•</span>
+            Teslim alınan: <strong>@ViewBag.CollectedCount</strong>
+            <span class="mx-1">•</span>
+            Bekleyen: <strong>@(ViewBag.TotalCount - ViewBag.CollectedCount)</strong>
+        </p>
+    </div>
+    <div class="d-flex gap-2">
+        <a class="btn btn-outline-secondary" asp-controller="Home" asp-action="Index">← Ana Sayfa</a>
+        <a class="btn btn-success" asp-controller="Order" asp-action="Collect">Yemek Teslim Al</a>
+    </div>
+</div>
+
+<div class="card shadow-sm">
+    <div class="table-responsive">
+        <table class="table table-striped table-hover align-middle mb-0">
+            <thead class="table-light">
+                <tr>
+                    <th>#</th>
+                    <th>Sipariş ID</th>
+                    <th>Öğrenci Adı</th>
+                    <th>Yemek Adı</th>
+                    <th>Teslim Durumu</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @{ int rowNo = 1; }
+                @foreach (var order in Model)
+                {
+                    <tr>
+                        <td class="text-muted">@(rowNo++)</td>
+                        <td><code>@order.OrderID</code></td>
+                        <td>@order.StudentName</td>
+                        <td>@order.MealName</td>
+                        <td><partial name="_OrderStatus" model="order.Collected" /></td>
+                        <td class="text-end">
+                            <a class="btn btn-sm btn-outline-primary" asp-controller="Order" asp-action="Details" asp-route-id="@order.OrderID">Teslim Bilgisi</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer bg-white text-muted small">
+        Toplam <strong>@Model.Count</strong> yemek siparişi listeleniyor.
+    </div>
+</div>

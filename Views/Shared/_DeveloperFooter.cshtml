@@ -1,0 +1,13 @@
+<div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small">
+    <div>
+        <span class="fw-semibold">SWE 203 Web Programlama - Ödev 1</span>
+        <span class="text-white-50 ms-2">© @DateTime.Now.Year</span>
+    </div>
+    <div>
+        <span class="text-white-50 me-2">Geliştirici@(DeveloperInfo.Developers.Count > 1 ? "ler" : ""):</span>
+        @foreach (var dev in DeveloperInfo.Developers)
+        {
+            <span class="badge bg-secondary me-1">@dev.FirstName @dev.LastName - @dev.StudentNumber</span>
+        }
+    </div>
+</div>
