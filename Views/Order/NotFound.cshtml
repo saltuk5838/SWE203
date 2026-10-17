@@ -1,11 +1,11 @@
 <div class="alert alert-danger" role="alert">
-    <h1 class="h4 alert-heading">Sipariş Bulunamadı</h1>
+    <h1 class="h4 alert-heading">Order Not Found</h1>
     <p class="mb-0">
-        <code>@ViewBag.SearchedId</code> numaralı bir sipariş sistemde kayıtlı değil.
+        There is no order with ID <code>@ViewBag.SearchedId</code> in the system.
     </p>
 </div>
 
 <div class="d-flex gap-2">
-    <a class="btn btn-primary" asp-controller="Order" asp-action="Index">Tüm Siparişler</a>
-    <a class="btn btn-outline-secondary" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+    <a class="btn btn-primary" asp-controller="Order" asp-action="Index">All Orders</a>
+    <a class="btn btn-outline-secondary" asp-controller="Home" asp-action="Index">Home</a>
 </div>

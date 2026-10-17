@@ -3,23 +3,23 @@ using System.ComponentModel.DataAnnotations;
 namespace MealOrderCollection.Models
 {
     /// <summary>
-    /// Bir yemek siparişini temsil eder.
+    /// Represents a single meal order.
     /// </summary>
     public class MealOrder
     {
-        [Display(Name = "Sipariş ID")]
+        [Display(Name = "Order ID")]
         public string OrderID { get; set; } = string.Empty;
 
-        [Display(Name = "Öğrenci Adı")]
+        [Display(Name = "Student Name")]
         public string StudentName { get; set; } = string.Empty;
 
-        [Display(Name = "Yemek Adı")]
+        [Display(Name = "Meal Name")]
         public string MealName { get; set; } = string.Empty;
 
-        [Display(Name = "Teslim Durumu")]
+        [Display(Name = "Collection Status")]
         public bool Collected { get; set; }
 
-        [Display(Name = "Teslim Zamanı")]
+        [Display(Name = "Collected At")]
         public DateTime? CollectedAt { get; set; }
     }
 }

@@ -6,30 +6,30 @@ builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
 
-// Tarih/saat biçimlendirmesi için Türkçe kültür ayarı
-var culture = new CultureInfo("tr-TR");
+// Use a fixed culture so date/time formatting is consistent regardless of the host machine.
+var culture = new CultureInfo("en-US");
 CultureInfo.DefaultThreadCurrentCulture = culture;
 CultureInfo.DefaultThreadCurrentUICulture = culture;
 
 app.UseStaticFiles();
 
-// Routing: okunabilir özel rotalar
+// Routing: readable custom routes
 app.MapControllerRoute(
     name: "orderDetails",
-    pattern: "siparis/{id}",
+    pattern: "orders/{id}",
     defaults: new { controller = "Order", action = "Details" });
 
 app.MapControllerRoute(
     name: "collect",
-    pattern: "teslim-al",
+    pattern: "collect",
     defaults: new { controller = "Order", action = "Collect" });
 
 app.MapControllerRoute(
     name: "orderList",
-    pattern: "siparisler",
+    pattern: "orders",
     defaults: new { controller = "Order", action = "Index" });
 
-// Varsayılan rota: {controller=Home}/{action=Index}/{id?}
+// Default route: {controller=Home}/{action=Index}/{id?}
 app.MapDefaultControllerRoute();
 
 app.Run();

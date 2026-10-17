@@ -4,48 +4,48 @@
 {
     <div class="alert alert-success alert-dismissible fade show" role="alert">
         ✅ @TempData["SuccessMessage"]
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Kapat"></button>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 }
 
 <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
-    <h1 class="h3 mb-0">Teslim Bilgisi</h1>
+    <h1 class="h3 mb-0">Collection Information</h1>
     <div class="d-flex gap-2">
-        <a class="btn btn-outline-secondary" asp-controller="Order" asp-action="Index">← Tüm Siparişler</a>
-        <a class="btn btn-outline-secondary" asp-controller="Home" asp-action="Index">Ana Sayfa</a>
+        <a class="btn btn-outline-secondary" asp-controller="Order" asp-action="Index">← All Orders</a>
+        <a class="btn btn-outline-secondary" asp-controller="Home" asp-action="Index">Home</a>
     </div>
 </div>
 
 <div class="card shadow-sm" style="max-width: 640px;">
     <div class="card-header bg-white d-flex justify-content-between align-items-center">
-        <span class="fw-semibold">Sipariş <code>@Model.OrderID</code></span>
+        <span class="fw-semibold">Order <code>@Model.OrderID</code></span>
         <partial name="_OrderStatus" model="Model.Collected" />
     </div>
     <div class="card-body">
         <dl class="row mb-0">
-            <dt class="col-sm-4">Sipariş ID</dt>
+            <dt class="col-sm-4">Order ID</dt>
             <dd class="col-sm-8"><code>@Model.OrderID</code></dd>
 
-            <dt class="col-sm-4">Öğrenci Adı</dt>
+            <dt class="col-sm-4">Student Name</dt>
             <dd class="col-sm-8">@Model.StudentName</dd>
 
-            <dt class="col-sm-4">Yemek Adı</dt>
+            <dt class="col-sm-4">Meal Name</dt>
             <dd class="col-sm-8">@Model.MealName</dd>
 
-            <dt class="col-sm-4">Teslim Durumu</dt>
-            <dd class="col-sm-8">@(Model.Collected ? "Teslim alındı" : "Teslim alınmadı")</dd>
+            <dt class="col-sm-4">Collection Status</dt>
+            <dd class="col-sm-8">@(Model.Collected ? "Collected" : "Not collected")</dd>
 
-            <dt class="col-sm-4">Teslim Zamanı</dt>
+            <dt class="col-sm-4">Collected At</dt>
             <dd class="col-sm-8">
                 @if (Model.Collected && Model.CollectedAt.HasValue)
                 {
                     <span>@Model.CollectedAt.Value.ToString("dd.MM.yyyy")</span>
-                    <span class="text-muted">saat</span>
+                    <span class="text-muted">at</span>
                     <span>@Model.CollectedAt.Value.ToString("HH:mm")</span>
                 }
                 else
                 {
-                    <span class="text-warning-emphasis">Henüz teslim alınmadı</span>
+                    <span class="text-warning-emphasis">Not collected yet</span>
                 }
             </dd>
         </dl>
@@ -53,7 +53,7 @@
     @if (!Model.Collected)
     {
         <div class="card-footer bg-white">
-            <a class="btn btn-success" asp-controller="Order" asp-action="Collect">Bu yemeği teslim al</a>
+            <a class="btn btn-success" asp-controller="Order" asp-action="Collect">Collect this meal</a>
         </div>
     }
 </div>

@@ -5,19 +5,19 @@ namespace MealOrderCollection.Controllers
 {
     public class HomeController : Controller
     {
-        // GET: /  veya  /Home/Index
+        // GET: /  or  /Home/Index
         public IActionResult Index()
         {
-            // ViewBag ile yemekhane adı ve bugünün tarihi
-            ViewBag.CafeteriaName = "Sakarya Üniversitesi Yemekhanesi";
-            ViewBag.CurrentDate = DateTime.Now.ToString("dd.MM.yyyy dddd");
+            // Cafeteria name and today's date via ViewBag
+            ViewBag.CafeteriaName = "Sakarya University Cafeteria";
+            ViewBag.CurrentDate = DateTime.Now.ToString("dddd, dd MMMM yyyy");
 
-            // ViewData ile teslim alınmış sipariş sayısı
+            // Number of collected orders via ViewData
             var collectedOrders = Repository.GetCollectedMealOrders();
             ViewData["CollectedCount"] = collectedOrders.Count;
             ViewData["TotalCount"] = Repository.GetMealOrders().Count;
 
-            // Model olarak teslim alınmış siparişler
+            // Collected orders are passed as the model
             return View(collectedOrders);
         }
     }

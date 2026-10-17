@@ -1,7 +1,7 @@
 namespace MealOrderCollection.Models
 {
     /// <summary>
-    /// Alt bilgide (footer) gösterilen geliştirici bilgileri.
+    /// Developer information shown in the footer.
     /// </summary>
     public class Developer
     {
@@ -12,11 +12,12 @@ namespace MealOrderCollection.Models
 
     public static class DeveloperInfo
     {
-        // Geliştirici bilgilerini buradan güncelleyebilirsiniz.
-        // İkinci bir grup üyesi varsa listeye yeni bir Developer ekleyin.
+        // Update the developer information here.
+        // If there is a second group member, add another Developer to the list.
         public static readonly List<Developer> Developers = new()
         {
-            new Developer { FirstName = "Saltuk Buğra", LastName = "Danişment", StudentNumber = "B241202023" }
+            new Developer { FirstName = "Saltuk Buğra", LastName = "Danişment", StudentNumber = "B241202023" },
+            new Developer { FirstName = "Mustafa Timur", LastName = "Yurdakan", StudentNumber = "B241202018" }
         };
     }
 }

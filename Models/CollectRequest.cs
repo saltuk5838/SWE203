@@ -3,12 +3,12 @@ using System.ComponentModel.DataAnnotations;
 namespace MealOrderCollection.Models
 {
     /// <summary>
-    /// Teslim alma formundan gelen veriyi model binding ile karşılayan sınıf.
+    /// Receives the data posted from the collection form via model binding.
     /// </summary>
     public class CollectRequest
     {
-        [Required(ErrorMessage = "Lütfen bir Sipariş ID giriniz.")]
-        [Display(Name = "Sipariş ID")]
+        [Required(ErrorMessage = "Please enter an Order ID.")]
+        [Display(Name = "Order ID")]
         public string OrderID { get; set; } = string.Empty;
     }
 }

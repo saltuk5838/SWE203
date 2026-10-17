@@ -10,7 +10,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O001",
                 StudentName = "Timur Yurdakan",
-                MealName = "Orman kebabı",
+                MealName = "Forest Kebab",
                 Collected = true,
                 CollectedAt = new DateTime(2026, 10, 5, 12, 10, 0)
             });
@@ -18,8 +18,8 @@ namespace MealOrderCollection.Models
             _mealOrders.Add(new MealOrder()
             {
                 OrderID = "O002",
-                StudentName = "Saltuk buğra ",
-                MealName = "Padişah kebabı",
+                StudentName = "Saltuk Buğra",
+                MealName = "Padishah Kebab",
                 Collected = false,
                 CollectedAt = null
             });
@@ -28,7 +28,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O003",
                 StudentName = "Mete Çakır",
-                MealName = "Orman kebabı",
+                MealName = "Forest Kebab",
                 Collected = false,
                 CollectedAt = null
             });
@@ -36,8 +36,8 @@ namespace MealOrderCollection.Models
             _mealOrders.Add(new MealOrder()
             {
                 OrderID = "O004",
-                StudentName = "adem yılmaz ",
-                MealName = "Tavuk döner ",
+                StudentName = "Adem Yılmaz",
+                MealName = "Chicken Doner",
                 Collected = false,
                 CollectedAt = null
             });
@@ -45,8 +45,8 @@ namespace MealOrderCollection.Models
             _mealOrders.Add(new MealOrder()
             {
                 OrderID = "O005",
-                StudentName = "yunus emre ",
-                MealName = "Et döner",
+                StudentName = "Yunus Emre",
+                MealName = "Beef Doner",
                 Collected = true,
                 CollectedAt = new DateTime(2026, 10, 5, 12, 20, 0)
             });
@@ -54,8 +54,8 @@ namespace MealOrderCollection.Models
             _mealOrders.Add(new MealOrder()
             {
                 OrderID = "O006",
-                StudentName = "Mustafa Emin ",
-                MealName = "Etli Kuru Fasulye ",
+                StudentName = "Mustafa Emin",
+                MealName = "White Bean Stew with Meat",
                 Collected = false,
                 CollectedAt = null
             });
@@ -64,7 +64,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O007",
                 StudentName = "Furkan Kurnaz",
-                MealName = "Sade Makarna",
+                MealName = "Plain Pasta",
                 Collected = true,
                 CollectedAt = new DateTime(2026, 10, 5, 12, 25, 0)
             });
@@ -73,7 +73,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O008",
                 StudentName = "Köksal Andaç",
-                MealName = "Mengen Musakka",
+                MealName = "Mengen Moussaka",
                 Collected = false,
                 CollectedAt = null
             });
@@ -82,7 +82,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O009",
                 StudentName = "Erdem Efe",
-                MealName = "Rosto Köfte Püreli",
+                MealName = "Roast Meatballs with Mashed Potatoes",
                 Collected = false,
                 CollectedAt = null
             });
@@ -91,7 +91,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O010",
                 StudentName = "Adem Yiğit Fidan",
-                MealName = "Zerdeçallı tavuk kavurma",
+                MealName = "Turmeric Chicken Saute",
                 Collected = true,
                 CollectedAt = new DateTime(2026, 10, 5, 12, 35, 0)
             });
@@ -100,7 +100,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O011",
                 StudentName = "Ali Arslan",
-                MealName = "Etli Barbunya ",
+                MealName = "Borlotti Beans with Meat",
                 Collected = true,
                 CollectedAt = new DateTime(2026, 10, 5, 12, 40, 0)
             });
@@ -109,7 +109,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O012",
                 StudentName = "Alperen Söyler",
-                MealName = "Et Döner",
+                MealName = "Beef Doner",
                 Collected = false,
                 CollectedAt = null
             });
@@ -118,7 +118,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O013",
                 StudentName = "Onur Çınar",
-                MealName = "Mengen Musakka",
+                MealName = "Mengen Moussaka",
                 Collected = false,
                 CollectedAt = null
             });
@@ -127,7 +127,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O014",
                 StudentName = "Deniz Arık",
-                MealName = "Padişah kebabı",
+                MealName = "Padishah Kebab",
                 Collected = true,
                 CollectedAt = new DateTime(2026, 10, 5, 12, 50, 0)
             });
@@ -135,8 +135,8 @@ namespace MealOrderCollection.Models
             _mealOrders.Add(new MealOrder()
             {
                 OrderID = "O015",
-                StudentName = " Hidayet Sıdar",
-                MealName = "Orman Kebabı",
+                StudentName = "Hidayet Sıdar",
+                MealName = "Forest Kebab",
                 Collected = false,
                 CollectedAt = null
             });
@@ -145,7 +145,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O016",
                 StudentName = "Mustafa Baki Beyoğlu",
-                MealName = "Salçalı Makarna",
+                MealName = "Pasta with Tomato Sauce",
                 Collected = true,
                 CollectedAt = new DateTime(2026, 10, 5, 13, 0, 0)
             });
@@ -154,7 +154,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O017",
                 StudentName = "Yasin Ünsal",
-                MealName = "Sultan  kebabı",
+                MealName = "Sultan Kebab",
                 Collected = false,
                 CollectedAt = null
             });
@@ -163,7 +163,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O018",
                 StudentName = "Semih Ayata",
-                MealName = "Etsiz kuru fasulye",
+                MealName = "Vegetarian White Bean Stew",
                 Collected = true,
                 CollectedAt = new DateTime(2026, 10, 5, 13, 10, 0)
             });
@@ -172,7 +172,7 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O019",
                 StudentName = "Berke Duran",
-                MealName = "kuru dolma ",
+                MealName = "Stuffed Dried Peppers",
                 Collected = false,
                 CollectedAt = null
             });
@@ -181,25 +181,25 @@ namespace MealOrderCollection.Models
             {
                 OrderID = "O020",
                 StudentName = "Baran Kulaklıoğlu",
-                MealName = "Et Döner",
+                MealName = "Beef Doner",
                 Collected = true,
                 CollectedAt = new DateTime(2026, 10, 5, 13, 20, 0)
             });
         }
 
-        /// <summary>Tüm yemek siparişlerini döndürür.</summary>
+        /// <summary>Returns all meal orders.</summary>
         public static List<MealOrder> GetMealOrders()
         {
             return _mealOrders;
         }
 
-        /// <summary>Teslim alınmış yemek siparişlerini döndürür.</summary>
+        /// <summary>Returns only the collected meal orders.</summary>
         public static List<MealOrder> GetCollectedMealOrders()
         {
             return _mealOrders.Where(o => o.Collected).ToList();
         }
 
-        /// <summary>Sipariş ID'sine göre siparişi bulur; bulunamazsa null döner.</summary>
+        /// <summary>Finds an order by its Order ID; returns null if not found.</summary>
         public static MealOrder? GetMealOrderById(string? orderId)
         {
             if (string.IsNullOrWhiteSpace(orderId))
@@ -212,8 +212,8 @@ namespace MealOrderCollection.Models
         }
 
         /// <summary>
-        /// Siparişi teslim alındı olarak işaretler ve teslim zamanını kaydeder.
-        /// Sipariş bulunamazsa veya zaten teslim alınmışsa false döner.
+        /// Marks the order as collected and records the collection time.
+        /// Returns false if the order does not exist or has already been collected.
         /// </summary>
         public static bool CollectMealOrder(string? orderId)
         {

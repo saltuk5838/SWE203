@@ -5,53 +5,53 @@ namespace MealOrderCollection.Controllers
 {
     public class OrderController : Controller
     {
-        // GET: /Order/Index  veya  /siparisler
-        // Teslim durumuna bakılmaksızın tüm siparişleri listeler.
+        // GET: /Order/Index  or  /orders
+        // Lists all meal orders regardless of their collection status.
         public IActionResult Index()
         {
             var orders = Repository.GetMealOrders();
 
-            ViewData["Title"] = "Tüm Yemek Siparişleri";
+            ViewData["Title"] = "All Meal Orders";
             ViewBag.TotalCount = orders.Count;
             ViewBag.CollectedCount = orders.Count(o => o.Collected);
 
             return View(orders);
         }
 
-        // GET: /Order/Details/O001  veya  /siparis/O001
-        // Parametre olarak Sipariş ID alır ve teslim bilgisini gösterir.
+        // GET: /Order/Details/O001  or  /orders/O001
+        // Takes an Order ID as a parameter and shows the collection information.
         public IActionResult Details(string id)
         {
             var order = Repository.GetMealOrderById(id);
 
             if (order == null)
             {
-                ViewData["Title"] = "Sipariş Bulunamadı";
+                ViewData["Title"] = "Order Not Found";
                 ViewBag.SearchedId = id;
                 Response.StatusCode = 404;
                 return View("NotFound");
             }
 
-            ViewData["Title"] = $"Teslim Bilgisi - {order.OrderID}";
+            ViewData["Title"] = $"Collection Information - {order.OrderID}";
             return View(order);
         }
 
-        // GET: /Order/Collect  veya  /teslim-al
-        // Teslim alma formunu gösterir.
+        // GET: /Order/Collect  or  /collect
+        // Shows the meal collection form.
         [HttpGet]
         public IActionResult Collect()
         {
-            ViewData["Title"] = "Yemek Teslim Al";
+            ViewData["Title"] = "Collect Meal";
             return View(new CollectRequest());
         }
 
         // POST: /Order/Collect
-        // Model binding ile formdan gelen Sipariş ID'yi alır ve siparişi teslim alındı olarak işaretler.
+        // Receives the Order ID from the form via model binding and marks the order as collected.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public IActionResult Collect(CollectRequest request)
         {
-            ViewData["Title"] = "Yemek Teslim Al";
+            ViewData["Title"] = "Collect Meal";
 
             if (!ModelState.IsValid)
             {
@@ -63,21 +63,21 @@ namespace MealOrderCollection.Controllers
             if (order == null)
             {
                 ModelState.AddModelError(nameof(request.OrderID),
-                    $"'{request.OrderID}' numaralı bir sipariş bulunamadı.");
+                    $"No order with ID '{request.OrderID}' was found.");
                 return View(request);
             }
 
             if (order.Collected)
             {
                 ModelState.AddModelError(nameof(request.OrderID),
-                    $"'{order.OrderID}' numaralı sipariş zaten {order.CollectedAt:dd.MM.yyyy HH:mm} tarihinde teslim alınmış.");
+                    $"Order '{order.OrderID}' has already been collected on {order.CollectedAt:dd.MM.yyyy HH:mm}.");
                 return View(request);
             }
 
             Repository.CollectMealOrder(order.OrderID);
 
-            // PRG (Post-Redirect-Get) deseni: başarı mesajını TempData ile taşıyıp teslim bilgisi sayfasına yönlendir.
-            TempData["SuccessMessage"] = $"'{order.OrderID}' numaralı sipariş ({order.MealName} - {order.StudentName}) başarıyla teslim alındı.";
+            // PRG (Post-Redirect-Get) pattern: carry the success message via TempData and redirect to the details page.
+            TempData["SuccessMessage"] = $"Order '{order.OrderID}' ({order.MealName} - {order.StudentName}) has been collected successfully.";
             return RedirectToAction(nameof(Details), new { id = order.OrderID });
         }
     }

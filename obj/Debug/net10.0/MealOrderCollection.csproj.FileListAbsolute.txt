@@ -19,7 +19,6 @@ C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0
 C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0\rjsmrazor.dswa.cache.json
 C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0\rjsmcshtml.dswa.cache.json
 C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0\scopedcss\bundle\MealOrderCollection.styles.css
-C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0\compressed\z7d3lhcrht-{0}-v5qlemkso3-v5qlemkso3.gz
 C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0\staticwebassets.build.json
 C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0\staticwebassets.build.json.cache
 C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0\staticwebassets.development.json
@@ -30,3 +29,5 @@ C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0
 C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0\MealOrderCollection.pdb
 C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0\MealOrderCollection.genruntimeconfig.cache
 C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0\ref\MealOrderCollection.dll
+C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0\MealOrderCollection.sourcelink.json
+C:\Users\saltu\OneDrive\Desktop\b241202023\MealOrderCollection\obj\Debug\net10.0\compressed\z7d3lhcrht-{0}-rl3txotrr2-rl3txotrr2.gz
